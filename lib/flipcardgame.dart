@@ -32,7 +32,7 @@ class _FlipCardGaneState extends State<FlipCardGane> {
   Widget getItem(int index) {
     return Container(
       decoration: BoxDecoration(
-          color: Colors.grey[100],
+          color: Colors.grey[300],
           boxShadow: [
             BoxShadow(
               color: Colors.black45,
@@ -106,7 +106,7 @@ class _FlipCardGaneState extends State<FlipCardGane> {
                     borderRadius: BorderRadius.circular(24),
                   ),
                   child: Text(
-                    "Replay",
+                    "VOLVER A JUGAR",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
@@ -129,7 +129,7 @@ class _FlipCardGaneState extends State<FlipCardGane> {
                               style: Theme.of(context).textTheme.headline3,
                             )
                           : Text(
-                              'Left:$_left',
+                              '$_left POR RESOLVER',
                               style: Theme.of(context).textTheme.headline3,
                             ),
                     ),
@@ -185,6 +185,7 @@ class _FlipCardGaneState extends State<FlipCardGane> {
                                         if (_cardFlips
                                             .every((t) => t == false)) {
                                           print("Won");
+                                          
                                           Future.delayed(
                                               const Duration(milliseconds: 160),
                                               () {
@@ -203,7 +204,7 @@ class _FlipCardGaneState extends State<FlipCardGane> {
                                 direction: FlipDirection.HORIZONTAL,
                                 front: Container(
                                   decoration: BoxDecoration(
-                                      color: Colors.grey,
+                                      color: Colors.grey[300],
                                       borderRadius: BorderRadius.circular(5),
                                       boxShadow: [
                                         BoxShadow(
