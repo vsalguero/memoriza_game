@@ -1,8 +1,11 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'data.dart';
 import 'dart:async';
+import 'dart:ui';
+import 'package:flutter_sequence_animation/flutter_sequence_animation.dart';
+import 'package:sweetalert/sweetalert.dart';
+import 'package:flutter/material.dart';
 
 class FlipCardGane extends StatefulWidget {
   final Level _level;
@@ -185,7 +188,11 @@ class _FlipCardGaneState extends State<FlipCardGane> {
                                         if (_cardFlips
                                             .every((t) => t == false)) {
                                           print("Won");
-                                          
+                                          //show sweet alert
+                                          SweetAlert.show(context,
+                                              title: "Completado!",
+                                              subtitle: "Felicidades!",
+                                              style: SweetAlertStyle.success);
                                           Future.delayed(
                                               const Duration(milliseconds: 160),
                                               () {
