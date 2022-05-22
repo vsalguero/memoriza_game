@@ -122,30 +122,30 @@ class Details {
   int noOfstar;
 
   Details(
-      {this.name,
-      this.primarycolor,
-      this.secomdarycolor,
-      this.noOfstar,
-      this.goto});
+      {required this.name,
+      required this.primarycolor,
+      required this.secomdarycolor,
+      required this.noOfstar,
+      required this.goto});
 }
 
 List<Details> _list = [
   Details(
       name: "EASY",
       primarycolor: Colors.green,
-      secomdarycolor: Colors.green[300],
+      secomdarycolor: Colors.green[300]!,
       noOfstar: 1,
       goto: FlipCardGane(Level.Easy)),
   Details(
       name: "MEDIUM",
       primarycolor: Colors.orange,
-      secomdarycolor: Colors.orange[300],
+      secomdarycolor: Colors.orange[300]!,
       noOfstar: 2,
       goto: FlipCardGane(Level.Medium)),
   Details(
       name: "HARD",
       primarycolor: Colors.red,
-      secomdarycolor: Colors.red[300],
+      secomdarycolor: Colors.red[300]!,
       noOfstar: 3,
       goto: FlipCardGane(Level.Hard))
 ];

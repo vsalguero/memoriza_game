@@ -20,14 +20,14 @@ class _FlipCardGaneState extends State<FlipCardGane> {
 
   bool _wait = false;
   Level _level;
-  Timer _timer;
+  late Timer _timer;
   int _time = 5;
-  int _left;
-  bool _isFinished;
-  List<String> _data;
+  late int _left;
+  late bool _isFinished;
+  late List<String> _data;
 
-  List<bool> _cardFlips;
-  List<GlobalKey<FlipCardState>> _cardStateKeys;
+  late List<bool> _cardFlips;
+  late List<GlobalKey<FlipCardState>> _cardStateKeys;
 
   Widget getItem(int index) {
     return Container(
@@ -160,11 +160,11 @@ class _FlipCardGaneState extends State<FlipCardGane> {
                                             () {
                                           _cardStateKeys[_previousIndex]
                                               .currentState
-                                              .toggleCard();
+                                              ?.toggleCard();
                                           _previousIndex = index;
                                           _cardStateKeys[_previousIndex]
                                               .currentState
-                                              .toggleCard();
+                                              ?.toggleCard();
 
                                           Future.delayed(
                                               const Duration(milliseconds: 160),
@@ -217,7 +217,7 @@ class _FlipCardGaneState extends State<FlipCardGane> {
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: Image.asset(
-                                      "assets/animalspics/quest.png",
+                                      "assets/animals/quest.png",
                                     ),
                                   ),
                                 ),

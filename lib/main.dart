@@ -1,4 +1,4 @@
-import 'package:flipcard/homepage.dart';
+import 'package:memoriza_game/homepage.dart';
 import 'package:flutter/material.dart';
 
 void main() {

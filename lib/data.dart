@@ -7,29 +7,29 @@ List<String> fillSourceArray() {
   return [
     'assets/animalspics/dino.png',
     'assets/animalspics/dino.png',
-    'assets/animalspics/wolf.png',
-    'assets/animalspics/wolf.png',
+    'assets/animalspics/dog.png',
+    'assets/animalspics/dog.png',
     'assets/animalspics/peacock.png',
     'assets/animalspics/peacock.png',
     'assets/animalspics/whale.png',
     'assets/animalspics/whale.png',
-    'assets/animalspics/octo.png',
-    'assets/animalspics/octo.png',
-    'assets/animalspics/fish.png',
-    'assets/animalspics/fish.png',
+    'assets/animalspics/pulpo.png',
+    'assets/animalspics/pulpo.png',
+    'assets/animalspics/pez.png',
+    'assets/animalspics/pez.png',
     'assets/animalspics/frog.png',
     'assets/animalspics/frog.png',
-    'assets/animalspics/seahorse.png',
-    'assets/animalspics/seahorse.png',
-    'assets/animalspics/girraf.png',
-    'assets/animalspics/girraf.png',
+    'assets/animalspics/cat.png',
+    'assets/animalspics/cat.png',
+    'assets/animalspics/giraffe.png',
+    'assets/animalspics/girafe.png',
   ];
 }
 
-List getSourceArray(
+List<String> getSourceArray(
   Level level,
 ) {
-  List<String> levelAndKindList = new List<String>();
+  List<String> levelAndKindList = <String>[];
   List sourceArray = fillSourceArray();
   if (level == Level.Hard) {
     sourceArray.forEach((element) {
@@ -50,7 +50,7 @@ List getSourceArray(
 }
 
 List<bool> getInitialItemState(Level level) {
-  List<bool> initialItemState = new List<bool>();
+  List<bool> initialItemState = <bool>[];
   if (level == Level.Hard) {
     for (int i = 0; i < 18; i++) {
       initialItemState.add(true);
@@ -68,8 +68,7 @@ List<bool> getInitialItemState(Level level) {
 }
 
 List<GlobalKey<FlipCardState>> getCardStateKeys(Level level) {
-  List<GlobalKey<FlipCardState>> cardStateKeys =
-      new List<GlobalKey<FlipCardState>>();
+  List<GlobalKey<FlipCardState>> cardStateKeys = <GlobalKey<FlipCardState>>[];
   if (level == Level.Hard) {
     for (int i = 0; i < 18; i++) {
       cardStateKeys.add(GlobalKey<FlipCardState>());
